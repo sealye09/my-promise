@@ -139,6 +139,23 @@ class MyPromise {
 
     return promise2;
   }
+
+  catch(onRejected) {
+    return this.then(null, onRejected);
+  }
+
+  finially(fn) {
+    return this.then(
+      (value) => {
+        fn();
+        return value;
+      },
+      (reason) => {
+        fn();
+        throw reason;
+      }
+    );
+  }
 }
 
 MyPromise.deferred = function () {

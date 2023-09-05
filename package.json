@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "test": "promises-aplus-tests promise.js"
+    "test": "promises-aplus-tests index.js"
   },
   "devDependencies": {
     "promises-aplus-tests": "^2.1.2"
