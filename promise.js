@@ -19,6 +19,7 @@ function runMicroTask(fn) {
   }
 }
 
+// 是
 function resolvePromise(promise, x, resolve, reject) {
   if (promise === x) return reject(new TypeError("Chaining cycle detected for promise"));
 
